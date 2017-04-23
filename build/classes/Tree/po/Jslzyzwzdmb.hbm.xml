@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Tree.po">
+	<class name="Jslzyzwzdmb" table="jslzyzwzdmb">
+		<id name="id" type="integer" column="id">
+			<generator class="increment"/>
+		</id> 
+		<property name="code" column="code" type="string" not-null="true"/>
+		<property name="race" column="race" type="string" not-null="true"/>    
+		<property name="engname" column="engname" type="string" not-null="true"/>   
+		<property name="categroy" column="categroy" type="string"></property>
+		<property name="section" column="section" type="string" not-null="true"/> 
+		<property name="level" column="level" type="int"></property> 
+	</class>
+</hibernate-mapping>

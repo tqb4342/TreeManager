@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页丨树木知识系统</title>
+ <link href="static/css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/bar.css" rel="stylesheet">
+ <link href="css/index.css" rel="stylesheet">
+ <link href="css/foot.css" rel="stylesheet">
+ <link href="css/common.css" rel="stylesheet">
+ <link href="css/community.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="static/css/base.css">
+<link rel="stylesheet" type="text/css" href="static/css/result.css">
+ <script src="static/js/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/index.js"></script>
+<script type='text/javascript' src='/treeManager/dwr/util.js'></script>
+<script type='text/javascript' src='/treeManager/dwr/engine.js'></script>
+<script type='text/javascript' src='/treeManager/dwr/interface/UserManager.js'></script>
+<script type='text/javascript' src='/treeManager/dwr/interface/KzblxdmbManager.js'></script>
+ 
+ <style type="text/css">
+	 .con-top{
+            width: 950px;
+            margin: 30px auto;
+            margin-bottom: 0;
+            margin-left: 230px;
+        }
+        .line{
+            margin-left: 3px;
+            margin-right: 14px;
+            width: 907px;
+            border: 0;
+            border-bottom: 2px solid #ffae3b;
+        }
+        
+       button.btn.btn-default {
+    		margin-top: -5px;
+	   }
+	   
+	   input.form-control {
+   		 margin-left: 100px;
+		}
+		
+</style>
+ 
+</head>
+<body>
+
+<div id="mainPageHeader">
+    <div class="personLogo">
+        <div class="left">
+            <img src="static/image/logo.png" alt="">
+        </div>
+        <div id="noLogin">
+               <span id="loginAndRegArea">
+                <ul>
+                    <li><a href="register.html">个人注册</a></li>
+                    <li><a href="login.html">登录</a></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </span>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+ <div id="header">
+    <div class="page-container" id="nav">
+        <div class="menu">
+            <ul class="nav-item l">
+                <li><a href="index.html">植被类型</a></li>
+                <li><a id="forest-type" href="ForestType.html">森林类型</a></li>
+                <li><a href="TreeSpecies.html">林业物种</a></li>
+                <li><a href="discuss.html">讨论</a></li>
+              
+            </ul>
+        </div>
+        
+        <div id="login-div">
+        </div>
+    </div>
+</div>
+
+<div class="con-top">
+
+	 <div class="input-group">
+     <input id="Search" type="text" class="form-control" placeholder="Search for...">
+      <div class="input-group-btn">
+        <button id="button-search" class="btn btn-default" type="button">林业搜索</button>
+      </div>
+    </div>
+  <br/>
+	  <div class="line"></div>
+</div>
+
+
+
+
+
+<div class="result-middle">
+		<!-- 	<h2 class="middle-title"><i class="tab-ico"></i><span id="tableName"></span>
+				<from name="searchFrom" class="middleSearch">
+				</from>
+			</h2> -->
+			<div class="list-table">
+				<div class="flex-box table-head">
+					<div class="row row-normal">编号</div>
+					<div class="row row-normal">编码</div>
+					<div class="row row-normal">名称</div>
+					<div class="row row-normal"></div>
+					<div class="row row-widther">说明</div>
+				</div>
+				<div class="table-body">
+				<!--  
+			 <div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="1">1</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1000&amp;dataid=0" class="a-more-info" title="A1000">A1000</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=林地&amp;dataid=0" class="a-more-info" title="林地">林地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=LD&amp;dataid=0" class="a-more-info" title="LD">LD</a></div><div class="row row-widther"><p class="detail-info">用来发展林业的土地，它包括有林地、疏林地、灌木林地、未成林造林地、苗圃地、无立木林地、宜林地和辅助生产林地</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div>
+				<div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="2">2</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1100&amp;dataid=1" class="a-more-info" title="A1100">A1100</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=有林地&amp;dataid=1" class="a-more-info" title="有林地">有林地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=YLD&amp;dataid=1" class="a-more-info" title="YLD">YLD</a></div><div class="row row-widther"><p class="detail-info">连续面积大于0.067hm2、郁闭度0.20以上、附着有森林植被的林地，包括乔木林、红树林和竹林</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="3">3</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1110&amp;dataid=2" class="a-more-info" title="A1110">A1110</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=乔木林&amp;dataid=2" class="a-more-info" title="乔木林">乔木林</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=QML&amp;dataid=2" class="a-more-info" title="QML">QML</a></div><div class="row row-widther"><p class="detail-info">由乔木（含因人工栽培而矮化的）树种组成的片林或林带：其中，乔木林带行数应在2行以上且行距≤4m或林冠冠幅水平投影宽度在10m以上；当林带的缺损长度超过林带宽度3倍时，应视为两条林带；两平行林带的带距≤8m时按片林调査；乔木林分为纯林和混交林                                                     </p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="4">4</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1111&amp;dataid=3" class="a-more-info" title="A1111">A1111</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=纯林&amp;dataid=3" class="a-more-info" title="纯林">纯林</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=CL&amp;dataid=3" class="a-more-info" title="CL">CL</a></div><div class="row row-widther"><p class="detail-info">一个树种（组）蓄积量（未达起测径级时按株数计算）占总蓄积量（株数）65%以上的乔木林地</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="5">5</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1112&amp;dataid=4" class="a-more-info" title="A1112">A1112</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=混交林&amp;dataid=4" class="a-more-info" title="混交林">混交林</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=HJL&amp;dataid=4" class="a-more-info" title="HJL">HJL</a></div><div class="row row-widther"><p class="detail-info">任何一个树种（组）蓄积量（未达起测径级时按株数计算）占总蓄积量 (株数）不到65%的乔木林地</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="6">6</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1120&amp;dataid=5" class="a-more-info" title="A1120">A1120</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=红树林&amp;dataid=5" class="a-more-info" title="红树林">红树林</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=HSL&amp;dataid=5" class="a-more-info" title="HSL">HSL</a></div><div class="row row-widther"><p class="detail-info">生长在热带和亚热带海岸潮间带或海潮能够达到的河流入海口，附着有红树科植物和其他在形态上和生态上具有相似群落特性科属植物的林地</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="7">7</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1130&amp;dataid=6" class="a-more-info" title="A1130">A1130</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=竹林&amp;dataid=6" class="a-more-info" title="竹林">竹林</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=ZL&amp;dataid=6" class="a-more-info" title="ZL">ZL</a></div><div class="row row-widther"><p class="info">附着有胸径2cm以上的竹类植物的林地</p></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="8">8</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1200&amp;dataid=7" class="a-more-info" title="A1200">A1200</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=疏林地&amp;dataid=7" class="a-more-info" title="疏林地">疏林地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=SLD&amp;dataid=7" class="a-more-info" title="SLD">SLD</a></div><div class="row row-widther"><p class="detail-info">附着有乔木树种，连续面积大于0.067hm2、郁闭度为0.10～0.19的林地</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="9">9</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1300&amp;dataid=8" class="a-more-info" title="A1300">A1300</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=灌木林地&amp;dataid=8" class="a-more-info" title="灌木林地">灌木林地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=GMLD&amp;dataid=8" class="a-more-info" title="GMLD">GMLD</a></div><div class="row row-widther"><p class="detail-info">附着有灌木树种或因生境恶劣矮化成灌木型的乔木树种及胸径小于2cm的小杂竹丛组成，以经营灌木林为目的或起防护作用、连续面积大于0.067 hm2、覆盖度大于等于30%的林地。其中，灌木林带行数应在2行以上且行距≤2m;当林带的缺损长度超过林带宽度3倍时，应视为两条林带;两平行灌木林带的带距≤4m时按片状灌木林调査</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="10">10</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1310&amp;dataid=9" class="a-more-info" title="A1310">A1310</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=国家特别规定灌木林&amp;dataid=9" class="a-more-info" title="国家特别规定灌木林">国家特别规定灌木林</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=GJTGGM&amp;dataid=9" class="a-more-info" title="GJTGGM">GJTGGM</a></div><div class="row row-widther"><p class="info">按照国家林业局关于参加森林覆盖率计算灌木林的有关规定执行</p></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="11">11</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1320&amp;dataid=10" class="a-more-info" title="A1320">A1320</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=其他灌木林地&amp;dataid=10" class="a-more-info" title="其他灌木林地">其他灌木林地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=QTGM&amp;dataid=10" class="a-more-info" title="QTGM">QTGM</a></div><div class="row row-widther"><p class="info">不属于国家特别规定的灌木林地</p></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="12">12</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1400&amp;dataid=11" class="a-more-info" title="A1400">A1400</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=未成林林地&amp;dataid=11" class="a-more-info" title="未成林林地">未成林林地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=WCLD&amp;dataid=11" class="a-more-info" title="WCLD">WCLD</a></div><div class="row row-widther"><p class="info">包括人工造林未成林地和封育未成林地</p></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="13">13</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1410&amp;dataid=12" class="a-more-info" title="A1410">A1410</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=未成林造林地&amp;dataid=12" class="a-more-info" title="未成林造林地">未成林造林地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=WCLZLD&amp;dataid=12" class="a-more-info" title="WCLZLD">WCLZLD</a></div><div class="row row-widther"><p class="detail-info">人工造林（包括植苗、穴播或条播、分殖造林）和飞播造林后不到成林年限，造林成效符合下列条件之一，苗木分布均匀，尚未郁闭但有成林希望的林地：①人工造林当年成活率85%以上或保存率80%(年均等降水量400mm以下的地区当年造林成活率为70%或保存率为65%)以上：②飞播造林后成苗调查苗木3000株/hm2以上或飞播治沙成苗2500株/hm2以上，且分布均匀</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="14">14</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1420&amp;dataid=13" class="a-more-info" title="A1420">A1420</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=未成林封育地&amp;dataid=13" class="a-more-info" title="未成林封育地">未成林封育地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=WCLFYD&amp;dataid=13" class="a-more-info" title="WCLFYD">WCLFYD</a></div><div class="row row-widther"><p class="detail-info">通过自然变化、封山育林或人工促进天然更新后，不超过成林年限，天然更新等级中等以上，尚未郁闭但有成林希望的林地</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="15">15</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1500&amp;dataid=14" class="a-more-info" title="A1500">A1500</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=苗圃地&amp;dataid=14" class="a-more-info" title="苗圃地">苗圃地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=MPD&amp;dataid=14" class="a-more-info" title="MPD">MPD</a></div><div class="row row-widther"><p class="detail-info">固定的林木、花卉育苗用地，不包括母树林、种子园、采穗圃、种质基地等种子、种条生产用地以及种子加工、储藏等设施用地</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="16">16</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1600&amp;dataid=15" class="a-more-info" title="A1600">A1600</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=无立木林地&amp;dataid=15" class="a-more-info" title="无立木林地">无立木林地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=WLMLD&amp;dataid=15" class="a-more-info" title="WLMLD">WLMLD</a></div><div class="row row-widther"><p class="info">包括采伐迹地、火烧迹地和其他无立木林地</p></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="17">17</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1610&amp;dataid=16" class="a-more-info" title="A1610">A1610</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=采伐迹地&amp;dataid=16" class="a-more-info" title="采伐迹地">采伐迹地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=CFJD&amp;dataid=16" class="a-more-info" title="CFJD">CFJD</a></div><div class="row row-widther"><p class="detail-info">采伐后保留木达不到疏林地标准、尚未人工更新或天然更新达不到中等等级的林地</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="18">18</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1620&amp;dataid=17" class="a-more-info" title="A1620">A1620</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=火烧迹地&amp;dataid=17" class="a-more-info" title="火烧迹地">火烧迹地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=HSJD&amp;dataid=17" class="a-more-info" title="HSJD">HSJD</a></div><div class="row row-widther"><p class="detail-info">火灾后活立木达不到疏林地标准、尚未人工更新或天然更新达不到中等等级的林地</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="19">19</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1630&amp;dataid=18" class="a-more-info" title="A1630">A1630</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=其他无立木林地&amp;dataid=18" class="a-more-info" title="其他无立木林地">其他无立木林地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=QTWLMLD&amp;dataid=18" class="a-more-info" title="QTWLMLD">QTWLMLD</a></div><div class="row row-widther"><p class="detail-info">①造林更新后，成林年限前达不到未成林造林地标准的林地：②造林更新到成林年限后，未达到有林地、灌木林地或疏林地标准的林地；③已经整地但还未造林的林地;④不符合上述林地区划条件，但有林地权属证明，因自然保护、科学研究等需要保留的土地</p><span class="show-button">展开</span><span class="hidden-button hidden">收起</span></div></div><div class="flex-box col-table"><div class="row row-small"><a href="#" class="a-more-info" title="20">20</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=A1700&amp;dataid=19" class="a-more-info" title="A1700">A1700</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=宜林地&amp;dataid=19" class="a-more-info" title="宜林地">宜林地</a></div><div class="row row-normal"><a href="lybk.html?tid=1&amp;wordname=YLD&amp;dataid=19" class="a-more-info" title="YLD">YLD</a></div><div class="row row-widther"><p class="info">经县级以上人民政府规划为林地的土地</p></div></div>
+					-->
+		    	</div>
+				 <nav id="datapage" style="display:block">
+				 	 <ul id="prePage" class="pagination"> </ul>
+					 <ul id="pageBox" class="pagination"></ul>
+					<ul id="nextPage" class="pagination">  </ul>
+     				<div id="current-page"></div>
+
+				</nav>
+			</div>
+		</div>
+	
+
+
+
+
+</body>
+</html>

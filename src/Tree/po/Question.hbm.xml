@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Tree.po">
+	<class name="Question" table="question">
+		<id name="qid" type="integer" column="qid">
+			<generator class="increment"/>
+		</id>
+		<property name="uid" column="uid" type="integer" />
+		<property name="context" column="context" type="string" />
+		<property name="releasedate" column="releasedate" type="date"/>  
+		<!-- 多个资源对应一个资源类型 -->
+		<many-to-one name="user" class="Tree.po.User" cascade="save-update" column="uid" insert="false" update="false" lazy="false"  not-null="true"/>
+		
+		<set name="answer" cascade="delete" lazy="false"  inverse="true" >
+			<key column="qid" update="false" not-null="true"/>
+			<one-to-many class="Tree.po.Answer"  ></one-to-many>
+		</set> 
+				 
+	</class>
+</hibernate-mapping>

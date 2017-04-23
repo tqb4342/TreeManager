@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>讨论丨树木知识系统</title>
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/bar.css" rel="stylesheet">
+ <link href="css/index.css" rel="stylesheet">
+ <link href="css/foot.css" rel="stylesheet">
+ <link href="css/common.css" rel="stylesheet">
+ <link href="css/community.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="static/css/base.css">
+<link rel="stylesheet" type="text/css" href="css/result.css">
+ <link href="css/talk.css" rel="stylesheet"/>
+ <link href="css/roundtable.css" rel="stylesheet"/>
+ <script src="static/js/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/discuss.js"></script>
+<script type='text/javascript' src='/treeManager/dwr/util.js'></script>
+<script type='text/javascript' src='/treeManager/dwr/engine.js'></script>
+<script type='text/javascript' src='/treeManager/dwr/interface/UserManager.js'></script>
+<script type='text/javascript' src='/treeManager/dwr/interface/QuestionManager.js'></script>
+ <style type="text/css">
+	 .con-top{
+            width: 950px;
+            margin: 30px auto;
+            margin-bottom: 0;
+            margin-left: 230px;
+        }
+        .line{
+            margin-left: 3px;
+            margin-right: 14px;
+            width: 907px;
+            border: 0;
+            border-bottom: 2px solid #ffae3b;
+        }
+        
+       button.btn.btn-default {
+    		margin-top: -5px;
+	   }
+	   
+	   input.form-control {
+   		 margin-left: 100px;
+		}
+		
+</style>
+ 
+</head>
+<body>
+
+<div id="mainPageHeader">
+    <div class="personLogo">
+        <div class="left">
+            <img src="static/image/logo.png" alt="">
+        </div>
+        <div id="noLogin">
+               <span id="loginAndRegArea">
+                <ul>
+                    <li><a href="register.html">个人注册</a></li>
+                    <li><a href="login.html">登录</a></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </span>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+ <div id="header">
+    <div class="page-container" id="nav">
+        <div class="menu">
+            <ul class="nav-item l">
+                <li><a href="index.html">植被类型</a></li>
+                <li><a id="forest-type" href="index.html">森林类型</a></li>
+                <li><a href="TreeSpecies.html">林业物种</a></li>
+                <li><a href="discuss.html">讨论</a></li>
+              
+            </ul>
+        </div>
+        
+        <div id="login-div">
+        </div>
+    </div>
+</div>
+
+<div class="con-top">
+<div id="button-teacher"></div>
+	<br/> <div class="line"></div>
+</div>
+<!--  <button type="button" class="btn btn-primary" id="pubLifeRecordButton" style="margin-left:700px">添加分享</button> -->
+<br/>
+
+<div id="center" style="margin:0 auto">
+   <!-- 
+     <div id="question" style="display: block;">
+        <ul><li>  
+            <h4>我已温好了酒，你的故事准备从哪说起呢？</h4>   
+             <br/>
+            <a data-toggle="modal" href="#" data-target="#myModal" data-quesid="14" id="currQuesId-14">回答问题</a> 
+            <span class="see1" style="display: block;">答案(2)</span>    
+            <span style="display: inline;width:10%">14</span> 
+            <span class="see2" style="display: inline;">收回</span> <br>
+            <li>   <div class="cuss-head woman talk">       <img src="../service/headPics/7d51d429-4146-434e-96a0-e663196a97c7">       <p class="user">  tqb  </p>      <p>说的好</p>      <span class="timeClass">2017-4-11  13:53</span>  </div></li>
+             <li>   <div class="cuss-head woman talk">       <img src="../service/headPics/7d51d429-4146-434e-96a0-e663196a97c7">       <p class="user">  tqb  </p>      <p>说的好</p>      <span class="timeClass">2017-4-11  13:53</span>  </div></li>
+            </li></ul>
+            
+         </div>
+       
+          <div id="question" style="display: block;">
+        <ul><li>  
+            <h4>我已温好了酒，你的故事准备从哪说起呢？</h4>   
+            <p>把所有的时间都揉成星辰，在岁月的夜空里熠熠生辉</p>   
+            <a data-toggle="modal" href="#" data-target="#myModal" data-quesid="14" id="currQuesId-14">回答问题</a> 
+            <span class="see1" style="display: block;">答案(2)</span>       <span style="visibility:hidden">14</span> 
+            <span class="see2" style="display: none;">收回</span> 
+            </li></ul>
+            
+         </div>
+          <div id="question" style="display: block;">
+        <ul><li>  
+            <h4>我已温好了酒，你的故事准备从哪说起呢？</h4>   
+            <p>把所有的时间都揉成星辰，在岁月的夜空里熠熠生辉</p>   
+            <a data-toggle="modal" href="#" data-target="#myModal" data-quesid="14" id="currQuesId-14">回答问题</a> 
+            <span class="see1" style="display: block;">答案(2)</span>       <span style="visibility:hidden">14</span> 
+            <span class="see2" style="display: none;">收回</span> 
+            </li></ul>
+            
+         </div>
+ -->  
+</div>
+
+
+
+
+<div>
+  
+
+ 	<a data-toggle="modal" href="#" data-target="#myModa2"><button type="button" class="btn btn-primary" id="pubLifeRecordButton" style="margin-left:700px">我要评论</button></a>
+			    <div id="question-modal" class="modal fade" id="myModa2" tabindex="-1" role="dialog"
+		         aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+		        <div class="modal-dialog">
+		            <div class="modal-content">
+		                <div class="modal-header">
+		                    <button type="button" class="close"
+		                            data-dismiss="modal" aria-hidden="true">
+		                        &times;
+		                    </button>
+		                    <h4 class="modal-title" id="myModalLabe2">
+		                        我的问题
+		                    </h4>
+		                </div>
+		                <div class="modal-body">
+		                    <form action="#" class="form-horizontal" role="form" method="post">
+		                        <div class="form-group">
+		                            <label for="bz" class="control-label col-sm-3">问题</label>
+		                            <div class="col-sm-7">
+		                                <textarea id="question-text" class="form-control" name="bz" id="disContent" cols="30" rows="10"></textarea>
+		                            </div>
+		                        </div>
+		                        <span id="res_msg"></span>
+		                        <div class="form-group">
+		                            <div class="col-sm-offset-3 col-sm-3">
+		                                <button type="button" id="addDiscussion" class="btn btn-primary">发表</button>
+		                                <button type="reset" class="btn">重置</button>
+		                            </div>
+		                        </div>
+		                    </form>
+		                </div>
+		                <div class="modal-footer">
+		                    <button  type="button" class="btn btn-default"
+		                            data-dismiss="modal">关闭
+		                    </button>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+</div>
+
+
+</body>
+</html>

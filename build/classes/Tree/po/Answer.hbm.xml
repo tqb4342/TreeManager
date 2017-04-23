@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Tree.po">
+	<class name="Answer" table="answer">
+		<id name="aid" type="integer" column="aid">
+			<generator class="increment"/>
+		</id> 
+		<property name="uid" column="uid" type="integer" />
+		<property name="qid" column="qid" type="integer" />
+		<property name="reply" column="reply" type="string" /> 
+		<property name="replydate" column="replydate" type="date"/>  
+		<many-to-one name="question" class="Tree.po.Question" cascade="save-update" column="qid" insert="false" update="false" lazy="false"  not-null="true"/>
+		<many-to-one name="user" class="Tree.po.User" cascade="save-update" column="uid" insert="false" update="false" lazy="false"  not-null="true"/>
+	</class>
+</hibernate-mapping>

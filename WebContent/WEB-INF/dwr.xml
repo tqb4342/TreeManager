@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC 
+	"-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN"
+	"http://getahead.org/dwr/dwr30.dtd">
+<dwr>
+	<allow>
+		<create creator="spring" javascript="UserManager"> 
+			<param name="beanName" value="userManager"/>
+		</create> 
+		<create creator="spring" javascript="AnswerManager"> 
+			<param name="beanName" value="answerManager"/>
+		</create> 
+		
+		<create creator="spring" javascript="QuestionManager"> 
+			<param name="beanName" value="questionManager"/>
+		</create> 
+		
+		<create creator="spring" javascript="JslzyzwzdmbManager"> 
+			<param name="beanName" value="jslzyzwzdmbManager"/>
+		</create> 
+		
+		<create creator="spring" javascript="KzblxdmbManager"> 
+			<param name="beanName" value="kzblxdmbManager"/>
+		</create> 
+		
+		<create creator="spring" javascript="LsllxdmbManager"> 
+			<param name="beanName" value="lsllxdmbManager"/>
+		</create> 
+		
+		<create creator="spring" javascript="LybkManager"> 
+			<param name="beanName" value="lybkManager"/>
+		</create> 
+		
+		<!-- 定义使用Bean转换器处理如下Java类 -->
+		<convert converter="bean" match="Tree.po.User"/> 
+		<convert converter="bean" match="Tree.po.Answer"/> 
+		<convert converter="bean" match="Tree.po.Question"/> 
+		<convert converter="bean" match="Tree.po.Jslzyzwzdmb"/> 
+		<convert converter="bean" match="Tree.po.Kzblxdmb"/> 
+		<convert converter="bean" match="Tree.po.Lsllxdmb"/> 
+		<convert converter="bean" match="Tree.po.Lybk"/> 
+	</allow>
+</dwr>
